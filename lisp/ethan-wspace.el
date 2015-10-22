@@ -772,13 +772,6 @@ This just activates each whitespace type in this buffer."
   (if ethan-wspace-mode
       (progn
         (when mode-require-final-newline
-          (when (not ethan-wspace-warned-mode-require-final-newline)
-            (display-warning :warning "You have `mode-require-final-newline'
-turned on. ethan-wspace supersedes `require-final-newline', so
-`mode-require-final-newline' will be turned off.
-
-You can disable this warning by customizing the variable
-`mode-require-final-newline' to be NIL."))
           (setq require-final-newline nil
                 ethan-wspace-warned-mode-require-final-newline t))
 
